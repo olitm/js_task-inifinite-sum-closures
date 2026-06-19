@@ -3,10 +3,10 @@
 /***
  * @return {function}
  */
-function makeInfinityAdder() {
+function makeAdder() {
   let totalSum = 0;
 
-  function fnAdder(number) {
+  function adder(number) {
     if (number === undefined) {
       const currentValue = totalSum;
 
@@ -17,10 +17,10 @@ function makeInfinityAdder() {
 
     totalSum += number;
 
-    return fnAdder;
+    return adder;
   }
 
-  return fnAdder;
+  return adder;
 }
 
-module.exports = makeInfinityAdder;
+module.exports = makeAdder;
